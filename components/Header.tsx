@@ -11,21 +11,23 @@ export default function Header() {
     const sections = ["Home", "About Me", "Career", "Projects", "Contact"];
 
     return <div className="w-full h-16 bg-gray-100 justify-center flex items-center px-8">
+
+        {/* avatar for logo */}
         <div className="flex-shrink-0">
-            {/* avatar for logo */}
             <Avatar className="rounded-full h-8 w-8 flex items-center justify-center bg-black text-white"> KF</Avatar>
         </div>
 
+        {/* buttons for sections */}
         <div className="flex flex-1 justify-end items-center space-x-6 pr-16">
             {sections.map((section: string, i: number) => (
                 <Button variant={"ghost"} key={i} className="hover:text-gray-600">
                     {section}</Button>
             ))}
-
         </div>
 
+        {/* toggle for dark mode */}
         <div className="flex-shrink-0">
-            <Switch/>
+            <Switch />
         </div>
 
     </div>
