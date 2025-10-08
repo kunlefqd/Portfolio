@@ -10,7 +10,7 @@ export default function Header() {
 
     const sections = ["Home", "About Me", "Career", "Projects", "Contact"];
 
-    return <div className="w-full h-16 bg-gray-100 justify-center flex items-center px-8">
+    return <div className=" w-full h-16 bg-gray-100 justify-center flex items-center px-8 dark:bg-gray-800 ">
 
         {/* avatar for logo */}
         <div className="flex-shrink-0">
@@ -20,7 +20,7 @@ export default function Header() {
         {/* buttons for sections */}
         <div className="flex flex-1 justify-end items-center space-x-6 pr-16">
             {sections.map((section: string, i: number) => (
-                <Button variant={"ghost"} key={i} className="hover:text-gray-600">
+                <Button size="lg" variant={"ghost"} key={i} className="hover:text-gray-600 dark:text-white dark:hover:text-gray-300">
                     {section}</Button>
             ))}
         </div>
