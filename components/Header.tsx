@@ -50,7 +50,7 @@ export default function Header() {
 
     const sections = ["Home", "About Me", "Career", "Projects", "Contact"];
 
-    return <div className=" w-full h-16 bg-gray-100 justify-center flex items-center px-8 dark:bg-gray-800 ">
+    return <div className=" w-full h-16 bg-white justify-center flex items-center px-8 dark:bg-black ">
 
         {/* avatar for logo */}
         <div className="flex-shrink-0">
