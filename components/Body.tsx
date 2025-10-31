@@ -5,8 +5,8 @@ export default function Body() {
 
     return(
         <div className ="h-lvh 
-        bg-linear-to-b from-white to-morning
-        dark:from-black to-midnight
-        "></div>
+        bg-linear-to-b from-white to-blue-900 dark:from-black dark:to-midnight
+        ">
+        </div>
     )
 }
