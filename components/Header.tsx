@@ -5,9 +5,15 @@ import { Button } from "./ui/button";
 import { Switch } from "@/components/ui/switch"
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar"
 import { SunMedium } from "lucide-react";
+import { StringToBoolean } from "class-variance-authority/types";
 
 
 export default function Header() {
+
+    type Section = {
+        name: string;
+        href: string;
+    };
 
     useEffect(() =>{
         /* if no theme is previously specified by user, grab device theme preferences, */
@@ -48,9 +54,15 @@ export default function Header() {
         }
     }
 
-    const sections = ["Home", "About Me", "Career", "Projects", "Contact"];
+    const sections = [
+        {name: "Home", href: "#hero"},
+        {name: "About Me", href: "#about"},
+        {name: "Career", href: "#career"},
+        {name: "Projects", href: "#projects"},
+        {name: "Contact", href: "#contact"},
+    ];
 
-    return <div className=" w-full h-16 bg-white justify-center flex items-center px-8 dark:bg-black ">
+    return <div className="fixed w-full h-16 bg-blue-200 justify-center flex items-center px-8 dark:bg-black rounded-lg ">
 
         {/* avatar for logo */}
         <div className="flex-shrink-0">
@@ -59,9 +71,9 @@ export default function Header() {
 
         {/* buttons for sections */}
         <div className="flex flex-1 justify-end items-center space-x-6 pr-16">
-            {sections.map((section: string, i: number) => (
+            {sections.map((section: Section, i: number ) => (
                 <Button size="lg" variant={"ghost"} key={i} className="hover:text-gray-600 dark:text-white dark:hover:text-gray-300">
-                    {section}</Button>
+                    {section.name}</Button>
             ))}
         </div>
 
