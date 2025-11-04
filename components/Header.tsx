@@ -62,7 +62,7 @@ export default function Header() {
         {name: "Contact", href: "#contact"},
     ];
 
-    return <div className="fixed w-full h-16 bg-blue-200 justify-center flex items-center px-8 dark:bg-black rounded-lg ">
+    return <div className="fixed w-full h-16 bg-blue-100 justify-center flex items-center px-8 dark:bg-black ">
 
         {/* avatar for logo */}
         <div className="flex-shrink-0">
